@@ -7,8 +7,10 @@ end
 
 def generate_dataset
   o = []
+  o << "QUANDL_SANDBOX_TEST/DATASET_#{Time.now.to_f}"
   o << "#{names.sample}'s Sandbox Dataset #{Time.now}"
-  o << "Date, high, low, average"
+  o << "Some description"
+  o << "Date, High, Low, Average"
   o << Quandl::Fabricate::Data.rand(rows: rand(20)+10, columns: 4).to_csv
   o << '----'
   o.join("\n")
