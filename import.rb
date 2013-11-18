@@ -14,7 +14,7 @@ def generate_dataset
   o.join("\n")
 end
 
-datasets = rand(5) + 2
+datasets = rand(5) + 5
 
 datasets.times do |i|
   puts generate_dataset
